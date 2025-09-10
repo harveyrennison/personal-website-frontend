@@ -1,30 +1,26 @@
 import { useState } from 'react';
-import Header from './components/header'; // import the header
+import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
+import Header from './components/header';
+import AboutMe from "./components/aboutMe";
+import Contact from "./components/contact";
+import NotFound from "./components/notFound";
+import Home from "./components/home";
+
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
-    <>
-      {/* Header at the top */}
-      <Header />
-
-      {/* Main content */}
-      <div style={{ padding: '2rem' }}>
-        <h1>Vite + React</h1>
-        <div className="card">
-          <button onClick={() => setCount((count) => count + 1)}>
-            count is {count}
-          </button>
-          <p>
-            Edit <code>src/App.tsx</code> and save to test HMR
-          </p>
-        </div>
-        <p className="read-the-docs">
-          Click on the Vite and React logos to learn more
-        </p>
-      </div>
-    </>
+    <div className="Website">
+        <Header />
+        <Router>
+            <Routes>
+                <Route index element={<Navigate to="/home" />} />
+                <Route path="home" element={<Home />} />
+                <Route path="about_me" element={<AboutMe />} />
+                <Route path="contact" element={<Contact />} />
+                <Route path="*" element={<NotFound />} />
+            </Routes>
+        </Router>
+    </div>
   );
 }
 
