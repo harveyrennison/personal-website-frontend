@@ -23,13 +23,14 @@ const Footer = () => {
           variant="body2" 
           sx={{ 
             fontWeight: 500,
-            color: 'grey.400'
+            color: 'grey.400',
+            ml:12
           }}
         >
           © 2025 Harvey Rennison
         </Typography>
         
-        <Stack direction="row" spacing={1}>
+        <Stack direction="row" spacing={1} sx={{mr:12}}>
 
             <IconButton 
                 component={Link} 
@@ -43,12 +44,12 @@ const Footer = () => {
                 } 
                 }}
             >
-                <GitHub fontSize="small" />
+                <GitHub fontSize="medium" />
             </IconButton>
 
             <IconButton 
                 component={Link} 
-                href="https://linkedin.com/in/harveyrennison" 
+                href="https://linkedin.com/in/harvey-rennison" 
                 target="_blank"
                 size="small"
                 sx={{ 
@@ -57,7 +58,7 @@ const Footer = () => {
                 } 
                 }}
             >
-                <LinkedIn fontSize="small" />
+                <LinkedIn fontSize="medium" />
             </IconButton>
 
             <IconButton 
@@ -71,9 +72,9 @@ const Footer = () => {
                     } 
                 }}
             >
-                <Email fontSize="small" />
+                <Email fontSize="medium" />
             </IconButton>
-            
+
         </Stack>
       </Stack>
     </Box>
