@@ -1,5 +1,4 @@
-import React, { useState } from 'react';
-import { AppBar, Toolbar, Typography, Tabs, Tab, ThemeProvider } from '@mui/material';
+import { AppBar, Toolbar, Typography, ThemeProvider } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
 import darkPurpleTheme from '../theme/personalTheme'; // Adjust path as needed
 
@@ -21,9 +20,10 @@ const Header = () => {
             sx={{ 
               flexGrow: 1,
               color: '#e8e9f3',
-              fontFamily: "'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
               fontWeight: 600,
+              cursor: "pointer"
             }}
+            onClick={() => navigate("/")}
           >
             Harvey Rennison
           </Typography>
