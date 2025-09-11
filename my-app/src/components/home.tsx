@@ -1,5 +1,5 @@
-import React from 'react';
 import { Typography, Box } from '@mui/material';
+import ProfilePhoto from './profilePhoto';
 
 const Home = () => {
   return (
@@ -21,7 +21,7 @@ const Home = () => {
 
             {/* Right side */}
             <Box>
-                <Typography variant="h3">insertImageHere</Typography>
+                <ProfilePhoto />
             </Box>
         </Box>
         <Box sx={{ display: "flex", justifyContent: "column", alignItems: "center" }}>
