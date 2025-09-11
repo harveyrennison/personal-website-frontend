@@ -26,7 +26,8 @@ const Home = () => {
             </Box>
         </Box>
         {/* Display featured projects */}
-        <Box sx={{ display: "flex", justifyContent: "column", alignItems: "center" }}>
+        <Box sx={{ width: "100%" }}>
+            <Typography variant="h3" fontWeight={600}>Featured Projects</Typography>
             <FeaturedProjects />
         </Box>
     </Box> // need to store project info in backend, then display featured projects here

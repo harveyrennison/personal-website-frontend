@@ -1,4 +1,4 @@
-interface Project {
+export interface Project {
     id: string;
     title: string;
     shortDescription: string;
@@ -21,8 +21,6 @@ export const projects: Project[] = [
     title: "Tower Defense Game",
     shortDescription: "A JavaFX tower defense game built with a teammate.",
     description: "Implemented enemy AI, pathfinding, and wave mechanics...",
-    image: "/assets/tower-defense.png",
-    //repoLink: "https://github.com/yourusername/tower-defense",
     tags: ["Game", "Team Project"],
     codingTags: ["Java", "JavaFX"],
     startDate: "2023-08-01",
