@@ -1,5 +1,6 @@
 import { Typography, Box } from '@mui/material';
 import ProfilePhoto from './profilePhoto';
+import FeaturedProjects from './featuredProjects';
 
 const Home = () => {
   return (
@@ -24,11 +25,9 @@ const Home = () => {
                 <ProfilePhoto />
             </Box>
         </Box>
+        {/* Display featured projects */}
         <Box sx={{ display: "flex", justifyContent: "column", alignItems: "center" }}>
-            <Box sx={{display: "flex", flexDirection: "column", justifyContent: "center", gap: 2 }}>
-                <Typography variant="h3">Featured Projects!</Typography>
-                <Typography variant="h3">insertProjects lorem lorem lorem lorem lorem lorem lorem</Typography> 
-            </Box>
+            <FeaturedProjects />
         </Box>
     </Box> // need to store project info in backend, then display featured projects here
   );
