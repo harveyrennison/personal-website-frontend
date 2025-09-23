@@ -1,6 +1,6 @@
 import { Typography, Box } from '@mui/material';
-import ProfilePhoto from './profilePhoto';
-import FeaturedProjects from './featuredProjects';
+import ProfilePhoto from '../modules/profilePhoto';
+import FeaturedProjects from '../modules/featuredProjects';
 
 const Home = () => {
   return (
