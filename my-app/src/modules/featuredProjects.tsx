@@ -1,9 +1,24 @@
+import React, { useState, useEffect } from 'react';
 import { Card, CardContent, CardMedia, Typography, Chip, Stack, Box } from "@mui/material";
 import { projects } from '../data/projects';
 
 const FeaturedProjects = () => {
+    const [isHovered, setIsHovered] = useState(false);
+    const [rotationAngle, setRotationAngle] = useState(0);
+
+    useEffect(() => {
+        const animationSpeed =  isHovered ? 0.1 : 1;
+        const animate = () => {
+            setRotationAngle(prev => prev + animationSpeed)
+        };
+        const interval = setInterval(animate, 16);
+        return () => clearInterval(interval);
+    }, [isHovered]);
+
+    // const getCardPosition
+
     return (
-        <Box display="grid" gridTemplateColumns="repeat(auto-fill, minmax(320px, 1fr))" gap={4} p={1} mt={2}>
+        <Box display="grid" gridTemplateColumns="repeat(auto-fill, minmax(320px, 1fr))" gap={2} p={1} mt={2}>
             {projects.map((project) => (
             <Card key={project.id} sx={{
                 borderRadius: 3,
