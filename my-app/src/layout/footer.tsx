@@ -62,9 +62,9 @@ const Footer = () => {
             </IconButton>
 
             <IconButton 
-                component={Link} 
-                href="mailto:harveyrennison@gmail.com" 
+                href="https://mail.google.com/mail/?view=cm&to=harveyrennisonbusiness@gmail.com&su=Contact%20-%20Harvey%20Rennison%20Website&authuser=0"
                 target="_blank"
+                rel="noopener noreferrer"
                 size="small"
                 sx={{ 
                     '&:hover': { 
