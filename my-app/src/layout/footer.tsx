@@ -33,9 +33,9 @@ const Footer = () => {
         <Stack direction="row" spacing={1} sx={{mr:12}}>
 
             <IconButton 
-                component={Link} 
                 href="https://github.com/harveyrennison" 
                 target="_blank"
+                rel="noopener noreferrer"
                 size="small"
                 sx={{ 
                 color: 'grey.400', 
@@ -48,9 +48,9 @@ const Footer = () => {
             </IconButton>
 
             <IconButton 
-                component={Link} 
                 href="https://linkedin.com/in/harvey-rennison" 
                 target="_blank"
+                rel="noopener noreferrer"
                 size="small"
                 sx={{ 
                 '&:hover': { 
@@ -66,11 +66,7 @@ const Footer = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 size="small"
-                sx={{ 
-                    '&:hover': { 
-                    backgroundColor: 'action.hover'
-                    } 
-                }}
+                sx={{ '&:hover': { backgroundColor: 'action.hover' } }}
             >
                 <Email fontSize="medium" />
             </IconButton>
