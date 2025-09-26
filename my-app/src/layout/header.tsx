@@ -1,6 +1,6 @@
-import { AppBar, Toolbar, Typography, ThemeProvider } from '@mui/material';
+import { AppBar, Toolbar, Typography, ThemeProvider, Box, Button } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
-import darkPurpleTheme from '../theme/personalTheme'; // Adjust path as needed
+import darkPurpleTheme from '../theme/personalTheme';
 
 const Header = () => {
   const navigate = useNavigate();
@@ -15,18 +15,15 @@ const Header = () => {
         }}
       >
         <Toolbar>
-          <Typography 
-            variant="h6" 
-            sx={{ 
-              flexGrow: 1,
-              color: '#e8e9f3',
-              fontWeight: 600,
-              cursor: "pointer"
-            }}
-            onClick={() => navigate("/")}
-          >
-            Harvey Rennison
-          </Typography>
+            <Box>
+                <Button color="inherit" onClick={() => navigate("/")}>Harvey Rennison</Button>
+            </Box>
+
+          <Box sx={{ marginLeft: 'auto', display: 'flex', gap: 2, mr:4}}>
+            <Button color="inherit" onClick={() => navigate("/")}>Home</Button>
+            <Button color="inherit" onClick={() => navigate("/about")}>About</Button>
+            <Button color="inherit" onClick={() => navigate("/contact")}>Contact</Button>
+          </Box>
         </Toolbar>
       </AppBar>
     </ThemeProvider>
