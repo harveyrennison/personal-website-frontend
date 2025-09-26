@@ -1,7 +1,27 @@
+import React, { useState, useEffect } from 'react';
 import { Box } from '@mui/material';
 import professionalPhoto from '../assets/HarveyRennison.png';
 
 const ProfilePhoto = () => {
+    const [isSpinning, setIsSpinning] = useState(false);
+
+    const speedSpinning = () => {
+        let theta = 0;
+        const maxTheta = 360;
+        let angularVelocity = 5;
+
+        theta += angularVelocity;
+        if (theta >= maxTheta) {
+            theta -= maxTheta;
+        }
+
+        return theta;
+    }
+
+    useEffect(() => {
+
+    })
+    
     return (
         <Box
         sx={{
